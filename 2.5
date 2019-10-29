@@ -1,0 +1,40 @@
+package uge2v2;
+
+public class Ex5 {
+	public static void main(String[] args) {
+
+//		for (int numOfLines = 5; numOfLines >= 1; numOfLines--) {
+//			for (int dashes = 1; dashes <= numOfLines; dashes++) {
+//				System.out.print("-");
+//			}
+//			
+//			for (int num = 1; num <= (11-2 * numOfLines); num++) {
+//				System.out.print(11-2 * numOfLines);
+//			}
+//
+//			for (int dashes = 1; dashes <= numOfLines; dashes++) {
+//				System.out.print("-");
+//			}
+//		
+//			System.out.println();
+//		}
+		
+		final int WIDTH = 11;
+		int numDashes = (WIDTH - 1) / 2;
+		for (int dashes = numDashes; dashes > 0; dashes--) {
+			for (int k = 0; k < dashes; k++)
+				System.out.print("-");
+
+			int number = WIDTH - 2 * dashes;
+			for (int k = 0; k < number; k++)
+				System.out.print(number);
+
+			for (int k = 0; k < dashes; k++)
+				System.out.print("-");
+
+			System.out.println();
+		}
+
+	}
+
+}
