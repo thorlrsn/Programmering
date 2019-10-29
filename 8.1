@@ -1,0 +1,93 @@
+//Det her er main-class
+public class Ship {
+	String name;
+	int length;
+	
+	//constructor
+	public Ship(String n, int l) {
+		name = n;
+		length = l;
+	}
+	
+	//method toString
+	public String toString() {
+		return "Ship "+name+" l="+length;
+	}
+	
+}
+
+/////////////////////////////////////ny class, men tilhør densamme opgave////////////////////////////////////////
+
+//Extends Ship betyder at det her er en subclass til Ship. Kan bruge metoder og constructors fra main-class 
+//med kommandoet "super"
+public class ContainerShip extends Ship {
+	
+	String name;
+	int length;
+	int teu;
+	
+	
+	public ContainerShip(String n, int l, int t) {
+		
+		// super kalder på main-class (Ship) og bruger dens name and length
+		// behøver ikke skrive det igen
+		super(n,l);
+		
+//		name = n;
+//		length = l;
+		
+		teu = t;
+		
+	}
+	
+	public String toString() {
+		//den her super kalder på main-class toString metode (det printes det main-class printer)
+		return super.toString() + " container carrier with "+teu+" TEU";
+	}
+}
+
+/////////////////////////////////////ny class, men tilhør densamme opgave/////////////////////////////////////////
+
+public class CruiseLiner extends Ship {
+	
+	String name;
+	int length;
+	int noOfPassangers;
+	
+	public CruiseLiner (String n, int l, int p) {	
+		
+		super(n,l);
+		
+		noOfPassangers = p;
+		
+	}
+	
+	public String toString(){
+		return super.toString() + " cruise liner with " + noOfPassangers + " passenger capacity";
+	}
+
+}
+
+/////////////////////////////////////ny class, men tilhør densamme opgave/////////////////////////////////////////
+
+
+public class Tanker extends Ship {
+	
+	String name;
+	int length;
+	int barrels;
+	
+	public Tanker (String n, int l, int b) {
+		
+		
+		super(n,l);
+		
+		barrels = b;
+		
+	}
+	
+	public String toString(){
+		return super.toString() + " tanker with " + barrels + " barrels capacity";
+	}
+
+}
