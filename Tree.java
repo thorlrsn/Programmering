@@ -1,28 +1,55 @@
 package project3;
 
 import java.awt.Color;
+import java.awt.Point;
 
 public class Tree {
 	
-	public void grow() {
-		// TODO Auto-generated method stub
+	protected Point pos;
+	protected double size;
+	protected Color col;
+	
+	
+	public Tree(Point bleh, double pluh) {
+	
+	this.pos = bleh;
+	this.size = pluh;
+	
 		
+		
+	}
+	
+	public double grow() {
+		
+		double newSize = 0;
+		
+		if( getColor() == Color.blue){
+			newSize = size * 6;
+		}
+		return newSize;
 	}
 
 	public Color getColor() {
-		// TODO Auto-generated method stub
-		return null;
+		return col;
 	}
 
 	public Object getPosition() {
-		// TODO Auto-generated method stub
-		x = pos.x;
+		
+		pos.getX();
+		
+		
 		return null;
+		
+		
+		
+		
 	}
 
 	public double getSize() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	
 
 }
