@@ -3,53 +3,15 @@ package project3;
 import java.awt.Color;
 import java.awt.Point;
 
-public class Tree {
-	
-	protected Point pos;
-	protected double size;
-	protected Color col;
-	
-	
-	public Tree(Point bleh, double pluh) {
-	
-	this.pos = bleh;
-	this.size = pluh;
-	
+public interface Tree {
 		
-		
-	}
-	
-	public double grow() {
-		
-		double newSize = 0;
-		
-		if( getColor() == Color.blue){
-			newSize = size * 6;
-		}
-		return newSize;
-	}
+	public abstract double grow();
 
-	public Color getColor() {
-		return col;
-	}
+	public abstract Color getColor();
 
-	public Object getPosition() {
-		
-		pos.getX();
-		
-		
-		return null;
-		
-		
-		
-		
-	}
+	public abstract double getPosition();
 
-	public double getSize() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
+	public abstract double getSize();
 	
 
 }
